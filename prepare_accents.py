@@ -11,6 +11,8 @@ if len(sys.argv) < 4:
 remove_tildes = int(sys.argv[3])==1
 
 tildes = {"á".decode('utf-8'):"'a", "é".decode('utf-8'):"'e", "í".decode('utf-8'):"'i", "ó".decode('utf-8'):"'o", "ú".decode('utf-8'):"'u", "Á".decode('utf-8'):"'A", "É".decode('utf-8'):"'E", "Í".decode('utf-8'):"'I", "Ó".decode('utf-8'):"'O", "Ú".decode('utf-8'):"'U", "è".decode('utf-8'):"''e","È".decode('utf-8'):"''E"}
+# Optional, you can add these values if you still have encodign problems:
+# "Ñ".decode('utf-8'):"'N","ñ".decode('utf-8'):"'n", "ü".decode('utf-8'):"''u", "Ü".decode('utf-8'):"''U"
 
 f=io.open(sys.argv[1],"r", encoding='utf-8')
 lines=f.readlines()
